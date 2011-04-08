@@ -1,0 +1,14 @@
+-if (flshstr = flash_helper) != ''
+  :javascript
+    setTimeout("location.reload(true);",3000);
+  !=flshstr
+%table
+  -@directories.each do |directory|
+    %tr
+      %td=directory
+      -if directory.match(/\.conf$/)
+        %td
+        %td=link_to "Start", "/apps/start?app=#{directory}"
+      -else
+        %td=link_to "Restart", "/apps/restart?app=#{directory}"
+        %td=link_to "Stop", "/apps/stop?app=#{directory}"
