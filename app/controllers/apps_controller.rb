@@ -7,6 +7,7 @@ class AppsController < ApplicationController
   def restart
     app = params[:app]
     Pow.restart_site(app)
+    flash[:notice] = "A restart has been issued."
     redirect_to :action => :index
   end
 

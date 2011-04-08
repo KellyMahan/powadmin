@@ -14,7 +14,7 @@ then install powadmin
 
 > `git clone git://github.com/KellyMahan/powadmin.git`
 >
-> `ln -s ./powadmin ~/.pow/powadmin`
+> ``ln -s `pwd`/powadmin ~/.pow/powadmin``
 
 restart pow
 
