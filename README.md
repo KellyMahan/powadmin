@@ -1,7 +1,7 @@
 PowAdmin
 ========
 
-A simple way of issue restarts and, stops and starts for pow configs.
+A simple way of issue restarts, stops and starts for pow configs.
 
 Install
 -------
