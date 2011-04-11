@@ -43,12 +43,9 @@ class Pow
   end
   
   def self.restart
-    pslist_string = `ps -eaf | grep -e 'Pow.*bin'`
-    pslist = pslist_string.split("\n")
-    pslist.select{|p| p.match(/Pow\/Versions/)}.each do |p|
-      pid = p.strip.split(" ")[1]
-      system("kill #{pid}")
-    end
+    pslist_string = `ps -eaf | grep -e 'P[o]w.*command.js'`
+    pid = pslist_string.strip.split(" ")[1]
+    system("kill #{pid}")
   end
   
 end

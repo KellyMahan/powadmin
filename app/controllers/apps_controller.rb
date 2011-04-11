@@ -10,6 +10,16 @@ class AppsController < ApplicationController
     flash[:notice] = "A restart has been issued."
     redirect_to :action => :index
   end
+  
+  def restart_all
+    app = params[:app]
+    child_pid = Thread.new do
+      sleep 2
+      Pow.restart
+    end
+    flash[:notice] = "A restart has been issued."
+    redirect_to :action => :index
+  end
 
   def stop
     app = params[:app]
