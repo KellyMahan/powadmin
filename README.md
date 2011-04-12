@@ -3,6 +3,14 @@ PowAdmin
 
 A simple way of issue restarts, stops and starts for pow configs.
 
+### UPDATE
+
+Pow is now adding in a web based admin that will be more integrated than what this application can accomplish.
+[https://github.com/37signals/pow/tree/pow.dev](pow/pow.dev)
+
+Future development will probably cease once the pow.dev branch is complete.
+
+
 Install
 -------
 
